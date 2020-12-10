@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+    <div class="scene">
+        <div class="card">
+          <!--front-->
+          <div class="card__face card__face--front">
+            <div class="content">
+              <i class="fas fa-wifi"></i>
+              <h1 class="h1">
+                  <span style="color:red">m</span>
+                  <span style="color:black">B</span>
+                  <span style="color:orange">a</span>
+                  <span style="color:red">n</span>
+                  <span style="color:blue">k</span>
+
+
+
+              </h1>
+              <img src="chip.png" alt="">
+              <h3>4956 7155 1234 5678</h3>
+              <h4 class="valid"><span>Valid <br /> thru</span> <span>10/23</span></h4>
+              <h4 class="h4">Jakub Urban</h4>
+
+
+          </div>
+          </div>
+          <!--back-->
+          <div class="card__face card__face--back">
+            <div class="blackbar"></div>
+            <div class="ccvtext">
+                <h5>Autorizen Signature-not unless signed</h5>
+                <div class="whiteBar"></div>
+                <div class="ccv">123</div>
+
+            </div>
+            <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus enim libero quae excepturi
+                saepe fuga quod repellat quas et voluptates dicta repudiandae error, culpa iste id impedit eum labore.
+                Officiis?</p>
+          </div>
+        </div>
+      </div>
+      <div class="logo">
+        <a href="mailto:ajarek@poczta.onet.pl">
+            <img src="logo.PNG" alt="husky">
+      <script src="https://kit.fontawesome.com/b4e6b4ce55.js" crossorigin="anonymous"></script>
+  <script>
+const card =document.querySelector('.card');
+card.addEventListener('click',()=>{
+    card.classList.toggle('is-flipped');
+})
+  </script>  
+</body>
+</html>
