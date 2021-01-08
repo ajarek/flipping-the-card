@@ -15,7 +15,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-
     position: relative;
 }
 
@@ -28,8 +27,6 @@ body::after {
     height: 100%;
     background: linear-gradient(#f00, #f0f);
     clip-path: circle(30% at 70% 99%);
-
-
 }
 
 .scene {
@@ -42,7 +39,6 @@ body::after {
 .card {
     width: 100%;
     height: 100%;
-
     position: relative;
     transition: transform 1s;
     transform-style: preserve-3d;
@@ -53,13 +49,12 @@ body::after {
     position: absolute;
     height: 100%;
     width: 100%;
-
     backface-visibility: hidden;
 }
 
 .card__face--front {
     padding: 20px;
-    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    box-shadow: 20px 20px 50px rgba(3, 3, 3, 0.5);
     border-radius: 15px;
     background: rgba(255, 255, 255, 0.1);
     overflow: hidden;
@@ -78,7 +73,8 @@ body::after {
     left: 50px;
 
 }
-.card__face--front img{
+
+.card__face--front img {
     max-width: 65px;
 }
 
@@ -128,8 +124,6 @@ body::after {
     letter-spacing: 2px;
 }
 
-
-
 .card__face--back {
     padding: 20px;
     box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
@@ -154,7 +148,6 @@ body::after {
     height: 60px;
     background: #000;
 
-
 }
 
 .card__face--back .ccvtext {
@@ -170,6 +163,7 @@ body::after {
     font-size: 12px;
     text-transform: uppercase;
     letter-spacing: 2px;
+
 }
 
 .card__face--back .ccvtext .whiteBar {
@@ -198,7 +192,7 @@ body::after {
 
 .card__face--back .text {
     position: absolute;
-    bottom: 30px;
+    bottom: 40px;
     left: 30px;
     right: 30px;
     color: #fff;
@@ -207,22 +201,102 @@ body::after {
     font-weight: 400;
 }
 
-
-
-
-
 .card.is-flipped {
     transform: rotateY(180deg);
 }
-.logo{
+
+.logo {
     display: flex;
     justify-content: center;
     position: absolute;
     top: 10px;
     left: 10px;
-    width:100px;
+    width: 60px;
+    padding: 15px 0 0 10px;
     background: linear-gradient(#f00, #f0f);
     border-radius: 50%;
-    border:1px  solid white;
-    box-shadow: 5px 5px 50px rgba(255,255,255, 0.5);
+    border: 1px solid white;
+    box-shadow: 5px 5px 50px rgba(255, 255, 255, 0.5);
 }
+
+.logo img {
+    width: 75%;
+}
+
+@media(max-width:600px) {
+    .scene {
+        width: calc(458px*0.7);
+        height: calc(306px*0.7);
+        perspective: 600px;
+    }
+
+    body::after {
+        content: '';
+        background: linear-gradient(#f00, #f0f);
+        clip-path: circle(45% at 70% 99%);
+    }
+
+    .card__face--front .h1 {
+        position: absolute;
+        top: 20px;
+        left: 50px;
+
+    }
+
+    .card__face--front img {
+        max-width: 50px;
+    }
+
+    .card__face--front h3 {
+        font-size: 0.7em;
+        padding: 5px;
+    }
+
+    .card__face--front .valid {
+        bottom: 30px;
+    }
+
+    .card__face--front .h4 {
+        bottom: 10px;
+    }
+
+    .card__face--back .blackbar {
+        top: 25px;
+        left: 0px;
+        width: 100%;
+        height: 45px;
+    }
+
+    .card__face--back .text {
+        bottom: 5px;
+        color: #fff;
+        font-size: 7px;
+    }
+
+    .card__face--back .ccvtext .whiteBar {
+        width: 280px;
+        height: 30px;
+        margin-top: 0px;
+    }
+
+    .card__face--back .ccv {
+        left: 240px;
+        top: -29px;
+    }
+
+    .card__face--back .ccvtext h5 {
+        color: #fff;
+        font-weight: 400;
+        font-size: 10px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+
+    }
+    .card__face--front .h1 {
+        position: absolute;
+        top:10px;
+        left: 50px;
+    
+    }
+}
+
